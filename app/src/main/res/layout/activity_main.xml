@@ -22,18 +22,18 @@
         android:id="@+id/divider"
         android:layout_width="409dp"
         android:layout_height="2dp"
-        android:outlineAmbientShadowColor="@color/black"
         android:background="?android:attr/listDivider"
+        android:outlineAmbientShadowColor="@color/black"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="76dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="76dp" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_one"
         android:layout_width="380dp"
-        app:cardCornerRadius="12dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        app:cardCornerRadius="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider"
@@ -43,43 +43,45 @@
             android:id="@+id/image_one"
             android:layout_width="90dp"
             android:layout_height="90dp"
-            android:src="@drawable/cake_one"/>
+            android:src="@drawable/cake_one" />
 
         <TextView
+            android:id="@+id/name"
             android:layout_width="150dp"
             android:layout_height="20dp"
             android:layout_marginLeft="100dp"
             android:textColor="@color/black"
-            android:textStyle="bold"
             android:textSize="18dp"
-            android:text="@string/cake_title"
-            app:layout_constraintStart_toEndOf="@+id/image_one"/>
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/image_one" />
+
         <TextView
+            android:id="@+id/desc"
             android:layout_width="match_parent"
             android:layout_height="20dp"
             android:layout_marginLeft="100dp"
             android:layout_marginTop="25dp"
             android:textColor="@color/black"
             android:textSize="14dp"
-            android:text="@string/cake_desc"
-            app:layout_constraintStart_toEndOf="@+id/image_one"/>
+            app:layout_constraintStart_toEndOf="@+id/image_one" />
+
         <TextView
+            android:id="@+id/price"
             android:layout_width="150dp"
             android:layout_height="20dp"
             android:layout_marginLeft="100dp"
             android:layout_marginTop="60dp"
             android:textColor="@color/black"
             android:textSize="18dp"
-            android:text="@string/cake_price"
-            app:layout_constraintStart_toEndOf="@+id/image_one"/>
+            app:layout_constraintStart_toEndOf="@+id/image_one" />
 
         <Button
             android:id="@+id/buttonEdit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/cake_edit_button"
             android:layout_marginLeft="285dp"
-            android:layout_marginTop="40dp" />
+            android:layout_marginTop="40dp"
+            android:text="@string/cake_edit_button" />
 
 
     </androidx.cardview.widget.CardView>
@@ -92,6 +94,17 @@
         android:layout_marginRight="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/card_one"
-        tools:srcCompat="@drawable/ic_baseline_library_add_24" />
+        tools:srcCompat="@drawable/ic_baseline_add_circle_outline_24" />
+
+    <ImageButton
+        android:id="@+id/imageButtonView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonAdd"
+        tools:srcCompat="@drawable/ic_baseline_add_circle_outline_24" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -60,7 +60,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public boolean deletetha_db(String name){
         SQLiteDatabase DB = this.getWritableDatabase();
-        Cursor cursor = DB.rawQuery("Select * from THA_DB where name = ?",new String[]{name});
+        Cursor cursor = DB.rawQuery("Select * from item_infor where name = ?",new String[]{name});
         if(cursor.getCount()>0) {
             long resault = DB.delete("item_infor", "name=?", new String[]{name});
             if (resault == -1) {
@@ -75,7 +75,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public Cursor gettha_db(){
         SQLiteDatabase DB = this.getWritableDatabase();
-        Cursor cursor = DB.rawQuery("Select * from THA_DB",null);
+        Cursor cursor = DB.rawQuery("Select * from item_infor",null);
 
         return cursor;
     }
